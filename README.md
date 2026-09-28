@@ -4,7 +4,6 @@
 
 [![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![API](https://img.shields.io/badge/API-OpenWeatherMap-orange?style=for-the-badge)](https://openweathermap.org/api)
-[![Requests](https://img.shields.io/badge/HTTP-Requests-2.31%2B-green?style=for-the-badge&logo=python&logoColor=white)](https://requests.readthedocs.io/)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](#-license)
 
 ---
@@ -120,3 +119,5 @@ Type `quit` to terminate the application safely.
                                         │
                                         ▼
                                   Search Again
+
+
