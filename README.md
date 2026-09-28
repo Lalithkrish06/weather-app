@@ -1,29 +1,122 @@
-# Weather App (API Project)
+# 🌤️ Weather App — Real-Time Weather Information
 
-A beginner-friendly web app that allows users to enter a city and fetch real-time weather data using an API. Displays key details like **temperature**, **humidity**, and other relevant weather information, all in a clean and interactive interface.
+> A lightweight Python application that retrieves and displays real-time weather information for any city using the OpenWeatherMap API.
 
----
-
-## 🚀 Features
-- Enter any city to get current weather  
-- Fetches data via a public API  
-- Displays temperature, humidity, and more  
-- Clean, beginner-friendly UI  
+[![Python](https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![API](https://img.shields.io/badge/API-OpenWeatherMap-orange?style=for-the-badge)](https://openweathermap.org/api)
+[![Requests](https://img.shields.io/badge/HTTP-Requests-2.31%2B-green?style=for-the-badge&logo=python&logoColor=white)](https://requests.readthedocs.io/)
+[![License](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](#-license)
 
 ---
 
-## 🎯 Why It's Job-Ready
-- Demonstrates ability to **work with APIs**  
-- Shows skills in **building simple backend logic**  
-- Handles **JSON data effectively**  
-- Perfect for **Junior Python Developer roles**
+## 📌 Overview
+
+**Weather App** is a Python-based real-time weather application that demonstrates practical **REST API integration, HTTP request handling, JSON data processing, environment-based configuration, exception handling, and object-oriented programming**.
+
+Users can enter the name of a city and retrieve its current weather information through the OpenWeatherMap API.
+
+### 🌍 The application provides:
+
+- 🌡️ Current temperature
+- 🌡️ Feels-like temperature
+- ☁️ Weather conditions
+- 💧 Humidity
+- 🌬️ Wind speed
+- ⏱️ Atmospheric pressure
+- 🌅 Sunrise time
+- 🌇 Sunset time
+- 🌎 City and country information
 
 ---
 
-## 🛠️ Tech Stack
-- **Python**  
-- **Requests** for API calls  
-- **Streamlit / Flask / Tkinter** for UI (adjust based on your implementation)  
+## ✨ Features
+
+### 🌍 City-Based Weather Search
+Search for the current weather of any supported city.
+
+### 🌡️ Real-Time Weather Data
+Fetches live weather information directly from the OpenWeatherMap API.
+
+### ☁️ Weather Conditions
+Displays a readable description of the current weather condition.
+
+### 💧 Humidity & Pressure
+Shows humidity percentage and atmospheric pressure.
+
+### 🌬️ Wind Information
+Displays the current wind speed.
+
+### 🌅 Sunrise & Sunset
+Converts Unix timestamps returned by the API into readable time values.
+
+### 🔐 Secure API-Key Handling
+The API key is loaded from an environment variable instead of being hard-coded.
+
+### ⚠️ Error Handling
+Handles common problems such as:
+
+- Invalid city
+- Invalid API key
+- Network errors
+- Request timeout
+- HTTP errors
+- Empty input
+
+### 🔄 Continuous Search
+Users can search for multiple cities without restarting the application.
+
+### 🚪 Clean Exit
+Type `quit` to terminate the application safely.
 
 ---
 
+## 🧠 How It Works
+
+```text
+                    ┌──────────────────┐
+                    │    Start App     │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │ Load Environment │
+                    │   Configuration  │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │ Enter City Name  │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │ Build API Query  │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │ Send HTTP GET    │
+                    │     Request      │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │ Receive JSON     │
+                    │    Response      │
+                    └────────┬─────────┘
+                             │
+                    ┌────────┴─────────┐
+                    │                  │
+                    ▼                  ▼
+              ┌───────────┐     ┌───────────────┐
+              │   Error   │     │    Success    │
+              └─────┬─────┘     └───────┬───────┘
+                    │                   │
+                    ▼                   ▼
+              Display Error       Extract Data
+                                        │
+                                        ▼
+                                Display Weather
+                                        │
+                                        ▼
+                                  Search Again
